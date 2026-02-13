@@ -3,9 +3,9 @@ _There’s four and twenty million doors on life’s endless corridor_
 Every day we make decisions. Many people, especially late at night, can’t help but wonder: if I had made a different choice in the past, what would my present look like?
 
 ## Counterfactual reasoning
-If there’s a chance in the future, we could trace the idea of counterfactuals from philosophy all the way through the historical development of epidemiology. In this essay, however, we focus simply on the basic concept of counterfactual reasoning and how it appears in epidemiology.
+If there’s a chance in the future, we could trace the idea of counterfactuals from philosophy all the way through the historical development of epidemiology. In this essay, however, we focus simply on the basic concept of counterfactual reasoning and how it is applied in epidemiology.
 
-The term counterfactual isn’t obscure or difficult. In general, it just refers to an alternative possibility to a given fact. These come as a pair: the fact and its counterfactual. From this concept, one key principle is easy to see: **a counterfactual cannot be observed**. And that is essentially the whole point—counterfactuals are not lofty; in fact, we often use them in everyday conversation. For example, many history enthusiasts discuss how history might have changed if a person in the past had not done a certain thing. That is a classic counterfactual example.
+The term counterfactual isn’t hard to understand. In general, it just refers to an alternative possibility to a given fact. These come as a pair: the fact and its counterfactual. From this concept, one key principle is obvious: **a counterfactual cannot be observed**. And that is essentially the whole point—counterfactuals are not lofty; in fact, we often use them in everyday conversation. For example, many history enthusiasts discuss how history might have changed if a person in the past had not done a certain thing, which is a classic example.
 
 In the example above, we can also see another feature of counterfactuals: within this framework, we compare **different possible outcomes of the same event**, while keeping everything else unchanged. If we could truly observe the counterfactual, then any difference in outcomes we observed could be fully attributed to the difference in the fact itself. This is how the counterfactual framework lays the foundation for the “building” of causal inference.
 ## Counterfactuals in epidemiology
@@ -20,7 +20,7 @@ Although this does not mean our results necessarily have strong causal validity,
 ## Simulating counterfactuals
 In reality, we can neither observe different timelines nor travel to parallel universes, let alone create a clone of a person. In that case, how can we satisfy the counterfactual framework’s requirement that “everything else stays the same”?
 
-The answer, of course, is that we can’t—so we cannot know an individual’s counterfactual. But for population-based research, we can **approximate** causal inference by simulating counterfactuals, using two populations that are highly comparable. Of course, large sample sizes also improve precision, but for causal inference specifically, populations are a compromise. Even so, population-based causal inference still requires meeting three conditions:
+The answer, of course, is that we can’t—so we cannot know an individual’s counterfactual. But for population-based research, we can **approximate** causal inference by simulating counterfactuals, using two highly comparable populations. Of course, large sample sizes also improve precision, but for causal inference specifically, populations are a compromise. Even so, population-based causal inference still requires meeting three conditions:
 
 1. Exchangeability
 2. Consistency
@@ -31,7 +31,7 @@ Discussions of these three conditions have been an enduring theme in epidemiolog
 <p style="text-align:center; opacity:.8; font-size:.95em;">
  <em>Written by Peng Luo, Harvard T.H. Chan School of Public Health<em>
 <br>
- <em>Translated from Chinese by ChatGPT<em>
+ <em>Translated from Chinese by 50% ChatGPT and 50% me<em>
 <br>
 <em>Last updated: 02/12/2026<em>
 </p>
