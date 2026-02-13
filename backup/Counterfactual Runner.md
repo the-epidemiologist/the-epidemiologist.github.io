@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>The Epidemiologist</title><link>https://the-epidemiologist.github.io</link><description>Methods Matter</description><copyright>The Epidemiologist</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/256907733?s=400&amp;u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&amp;v=4</url><title>avatar</title><link>https://the-epidemiologist.github.io</link></image><lastBuildDate>Fri, 13 Feb 2026 07:08:42 +0000</lastBuildDate><managingEditor>The Epidemiologist</managingEditor><ttl>60</ttl><webMaster>The Epidemiologist</webMaster><item><title>Counterfactual Runner</title><link>https://the-epidemiologist.github.io/post/Counterfactual%20Runner.html</link><description>_There’s four and twenty million doors on life’s endless corridor_
+_There’s four and twenty million doors on life’s endless corridor_
 
 Every day we make decisions. Many people, especially late at night, can’t help but wonder: if I had made a different choice in the past, what would my present look like?
 
@@ -29,16 +28,10 @@ The answer, of course, is that we can’t—so we cannot know an individual’s 
 
 Discussions of these three conditions have been an enduring theme in epidemiologic causal inference over the past several decades.
 
-&lt;p style='text-align:center; opacity:.8; font-size:.95em;'&gt;
- &lt;em&gt;Written by Peng Luo, Harvard T.H. Chan School of Public Health&lt;em&gt;
-&lt;br&gt;
- &lt;em&gt;Translated from Chinese by ChatGPT&lt;em&gt;
-&lt;br&gt;
-&lt;em&gt;Last updated: 02/12/2026&lt;em&gt;
-&lt;/p&gt;。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/Counterfactual%20Runner.html</guid><pubDate>Fri, 13 Feb 2026 07:08:12 +0000</pubDate></item><item><title>反事实行者</title><link>https://the-epidemiologist.github.io/post/fan-shi-shi-xing-zhe.html</link><description>_There's four and twenty million doors on life's endless corridor_
-
-我们每天都在作出决定，想必很多人在深夜也不禁会想：如果我在过去做了不同的决定，我的现在又会如何呢？
-
-## 反事实推理
-
-如果未来有机会，我们可以考证反事实从哲学出发，直到流行病学的发展历史。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/fan-shi-shi-xing-zhe.html</guid><pubDate>Tue, 10 Feb 2026 18:41:46 +0000</pubDate></item><item><title>有关方法</title><link>https://the-epidemiologist.github.io/post/you-guan-fang-fa.html</link><description>标题看起来很拗口，但是是翻译自我很喜欢的流行病学家，匹兹堡大学的**Sonja Swanson**去年九月的演讲**Method Matter**。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/you-guan-fang-fa.html</guid><pubDate>Fri, 30 Jan 2026 04:18:18 +0000</pubDate></item><item><title>流行病学人</title><link>https://the-epidemiologist.github.io/post/liu-xing-bing-xue-ren.html</link><description>建立博客这件事我计划已久。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/liu-xing-bing-xue-ren.html</guid><pubDate>Thu, 29 Jan 2026 05:37:44 +0000</pubDate></item></channel></rss>
+<p style="text-align:center; opacity:.8; font-size:.95em;">
+ <em>Written by Peng Luo, Harvard T.H. Chan School of Public Health<em>
+<br>
+ <em>Translated from Chinese by ChatGPT<em>
+<br>
+<em>Last updated: 02/12/2026<em>
+</p>
