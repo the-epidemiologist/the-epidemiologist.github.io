@@ -1,4 +1,7 @@
 name: build Gmeek
+run: |
+    python Gmeek.py
+    cp google66f276694cb98520.html docs/
 
 on:
   workflow_dispatch:
