@@ -72,17 +72,16 @@ Therefore, we conclude the four rules of d-separation:
 Drawing the DAG and thinking of the rules of d-separation, we will be able to visualize the study and the next step.
 
 ## Common DAGs
-
+I explain specifically about these types of DAGs in different articles; you may click on the subtitle to access them.
 ### confounder DAG
 <div align="center">
   <img src="https://github.com/user-attachments/assets/bb70327e-77fe-4bff-b45b-955a0dea9c7c" width="200" />
 </div>
 
-### selection bias DAG
+### [selection bias DAG](https://the-epidemiologist.github.io/post/Selection%20Bias%20in%20DAG.html)
 <div align="center">
   <img src="https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f" width="200" />
 </div>
-I explain more on selection bias DAG in [this article](https://the-epidemiologist.github.io/post/Selection%20Bias%20in%20DAG.html).
 
 ### mediation DAG
 <div align="center">
