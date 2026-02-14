@@ -80,7 +80,7 @@ Drawing the DAG and thinking of the rules of d-separation, we will be able to vi
 
 ### selection bias DAG
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/bf12de4b-9a67-48c6-9519-9b430eadce3f" width="200" />
+  <img src="https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f" width="200" />
 </div>
 
 ### mediation DAG
