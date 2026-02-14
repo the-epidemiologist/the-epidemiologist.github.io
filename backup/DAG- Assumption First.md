@@ -82,6 +82,7 @@ Drawing the DAG and thinking of the rules of d-separation, we will be able to vi
 <div align="center">
   <img src="https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f" width="200" />
 </div>
+I explain more on selection bias DAG in [this article](https://the-epidemiologist.github.io/post/Selection%20Bias%20in%20DAG.html).
 
 ### mediation DAG
 <div align="center">
