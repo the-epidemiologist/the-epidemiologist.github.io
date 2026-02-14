@@ -1,5 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>The Epidemiologist</title><link>https://the-epidemiologist.github.io/</link><description>Blog for Epidemiological Methods</description><copyright>The Epidemiologist</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/256907733?s=400&amp;u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&amp;v=4</url><title>avatar</title><link>https://the-epidemiologist.github.io/</link></image><lastBuildDate>Sat, 14 Feb 2026 22:00:15 +0000</lastBuildDate><managingEditor>The Epidemiologist</managingEditor><ttl>60</ttl><webMaster>The Epidemiologist</webMaster><item><title>DAG: Assumption First</title><link>https://the-epidemiologist.github.io//post/DAG-%20Assumption%20First.html</link><description>You may have watched Miguel Hernan's famous online course '[Draw Your Assumptions Before Your Conclusions](https://pll.harvard.edu/course/causal-diagrams-draw-your-assumptions-your-conclusions)' to learn about **directed acyclic graph (DAG)** and how we use it in epidemiology. As a fan of DAG, I would still want to write an article for it to express my love for DAG on this Valentine's Day.
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>The Epidemiologist</title><link>https://the-epidemiologist.github.io/</link><description>Blog for Epidemiological Methods</description><copyright>The Epidemiologist</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/256907733?s=400&amp;u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&amp;v=4</url><title>avatar</title><link>https://the-epidemiologist.github.io/</link></image><lastBuildDate>Sat, 14 Feb 2026 22:10:36 +0000</lastBuildDate><managingEditor>The Epidemiologist</managingEditor><ttl>60</ttl><webMaster>The Epidemiologist</webMaster><item><title>Selection Bias in DAG</title><link>https://the-epidemiologist.github.io//post/Selection%20Bias%20in%20DAG.html</link><description>In epidemiology, selection bias happens when the study population is biased from the source population. Thus, the findings fail to summarize the target population. In DAG, selection bias is known as **collider stratification bias**. Why is that? This article aims to explain the rationale behind and how a causal DAG illustrates selection bias.
+
+## Selection Bias DAG
+Let's begin with the selection bias DAG.
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f' width='300' /&gt;
+&lt;/div&gt;
+We define intervention as A, outcome as Y, and selected population as S. As you may recall, in this DAG, S is a collider/common outcome of the A and Y. According to the rules of d-separation, when S is being conditioned on, the path between A and Y is opened. Hence, we often describe the selection bias DAG as the common outcome DAG. But why is the node S being conditioned on? We will need to consider it through an epidemiological approach.
+
+## Selection
+Generally, the selection bias is not caused by our intentionally conditioning on the collider. You want to consider the conditioning(the box outside the variable/letter) means something happened on that node, in which the node is not the original variable from the data. For example, we can make an adjustment on the confounder variable, such as stratification, to condition on it. Using the same logic in selection: in most of the studies, we sample people from the source population that represents the target population. When we cannot use the entire target population in our study, you may consider that there's a natural box outside the node 'selection', like this:
+
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/8a08bba4-3aec-4d78-869b-98a0e5993c70' width='50' /&gt;
+&lt;/div&gt;
+
+Then, we can include the selection node in our DAG. Remember, we define the selection bias as a common outcome of exposure and the outcome; however, not all scenarios have a direct effect of exposure and outcome on 'selection'.
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/809454bf-a771-49bc-993e-a5c3cfc91474' width='300' /&gt;
+&lt;/div&gt;
+
+In this case, you can just ignore 'selection' on the DAG:
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/00c095e1-a18a-4fad-9b96-ff978b19bdda' width='175' /&gt;
+&lt;/div&gt;
+
+These two DAGs are the same thing if you made the previous assumption of no selection bias. Therefore, we can hide 'selection' in our DAG. This also means that once there's a common outcome(selection bias), the DAG will be this:
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f' width='300' /&gt;
+&lt;/div&gt;
+
+If you only look at the common outcome DAG. It may look like we did conditional on the 'selection' node. However,  through the previous approach, we understand that this is just that we cannot ignore the arrow to 'selection'.
+
+## Example
+Here's an example I used in my lab to explain why the conditioned collider will open a path. Imagine a DAG where A represents 'smoking,' and Y represents 'SNPs'. If I sample only lung cancer patients from the source population, you may find that 'lung cancer patients' is the common outcome of 'smoking' and 'SNPs' because both of them increase the risk of lung cancer. Therefore, if I only study 'lung cancer patients', knowing an individual doesn't smoke will give me the idea that the individual has a gene defect. If you actually do the analysis, you will observe an association, but this is caused by the stratification on the collider. In an epidemiological perspective, this is a biased result of selection bias that your study population is biased from the source population, and thus the results.
+
+&lt;p style='text-align:center; opacity:.8; font-size:.95em;'&gt;
+ &lt;em&gt;Written by Peng Luo, Harvard T.H. Chan School of Public Health&lt;em&gt;
+&lt;br&gt;
+&lt;em&gt;Last updated: 02/14/2026&lt;em&gt;
+&lt;/p&gt;。</description><guid isPermaLink="true">https://the-epidemiologist.github.io//post/Selection%20Bias%20in%20DAG.html</guid><pubDate>Sat, 14 Feb 2026 21:51:30 +0000</pubDate></item><item><title>DAG: Assumption First</title><link>https://the-epidemiologist.github.io//post/DAG-%20Assumption%20First.html</link><description>You may have watched Miguel Hernan's famous online course '[Draw Your Assumptions Before Your Conclusions](https://pll.harvard.edu/course/causal-diagrams-draw-your-assumptions-your-conclusions)' to learn about **directed acyclic graph (DAG)** and how we use it in epidemiology. As a fan of DAG, I would still want to write an article for it to express my love for DAG on this Valentine's Day.
 
 ## DAG
 DAG has a long history since the early 1900s, and has been used in mathematics, computer science, etc. In 1999, [Robins and Greenland](https://journals.lww.com/epidem/abstract/1999/01000/causal_diagrams_for_epidemiologic_research.8.aspx) introduced DAG to epidemiology as a tool to visualize biases for causal inference. Now, almost all the epidemiology programs educate the new generation about DAG.
