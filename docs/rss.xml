@@ -1,5 +1,104 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>The Epidemiologist</title><link>https://the-epidemiologist.github.io</link><description>Methods Matter</description><copyright>The Epidemiologist</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/256907733?s=400&amp;u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&amp;v=4</url><title>avatar</title><link>https://the-epidemiologist.github.io</link></image><lastBuildDate>Fri, 13 Feb 2026 07:14:31 +0000</lastBuildDate><managingEditor>The Epidemiologist</managingEditor><ttl>60</ttl><webMaster>The Epidemiologist</webMaster><item><title>Counterfactual Runner</title><link>https://the-epidemiologist.github.io/post/Counterfactual%20Runner.html</link><description>_There’s four and twenty million doors on life’s endless corridor_
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>The Epidemiologist</title><link>https://the-epidemiologist.github.io</link><description>Methods Matter</description><copyright>The Epidemiologist</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/256907733?s=400&amp;u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&amp;v=4</url><title>avatar</title><link>https://the-epidemiologist.github.io</link></image><lastBuildDate>Sat, 14 Feb 2026 06:59:57 +0000</lastBuildDate><managingEditor>The Epidemiologist</managingEditor><ttl>60</ttl><webMaster>The Epidemiologist</webMaster><item><title>DAG: Assumption First</title><link>https://the-epidemiologist.github.io/post/DAG-%20Assumption%20First.html</link><description>You may have watched Miguel Hernan's famous online course '[Draw Your Assumptions Before Your Conclusions](https://pll.harvard.edu/course/causal-diagrams-draw-your-assumptions-your-conclusions)' to learn about **directed acyclic graph (DAG)** and how we use it in epidemiology. As a fan of DAG, I would still want to write an article for it to express my love for DAG on this Valentine's Day.
+
+## DAG
+DAG has a long history since the early 1900s, and has been used in mathematics, computer science, etc. In 1999, [Robins and Greenland](https://journals.lww.com/epidem/abstract/1999/01000/causal_diagrams_for_epidemiologic_research.8.aspx) introduced DAG to epidemiology as a tool to visualize biases for causal inference. Now, almost all the epidemiology programs educate the new generation about DAG.
+
+Why do we care about DAG? The answer is already given in the previous paragraph. _Whereof one cannot speak, thereof one must be silent_.  Before introducing the DAG, we can only describe biases, though it is less efficient when the study is complicated. Drawing a DAG, we can understand all the biases easily and clearly.
+
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/4ad495ff-2ab6-41d5-88c0-2cdd4408608a' width='150' /&gt;
+  &lt;br/&gt;
+  &lt;small&gt;The quote is from Ludwig Wittgenstein&lt;/small&gt;
+&lt;/div&gt;
+
+## Properties 
+I now demonstrate the properties of the DAG. 
+
+In DAG, there are two components: **nodes** and **edges**. The nodes are shown as letters in the DAG. In the epidemiology context, it represents an actual outcome, intervention, or just say all the variables you have. The edges are shown as the arrows, which represent a direct effect from node to node, which is also a causal relationship that we care about. Therefore, in DAG 1, we say A causes Y.
+
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/f8899eca-488f-41a3-9952-62bc445af4d1' width='200' /&gt;
+  &lt;br/&gt;
+  &lt;small&gt;DAG1&lt;/small&gt;
+&lt;/div&gt;
+
+**Acyclic** means there should be no cycle in the DAG. Therefore, the nodes cannot cause themselves. In epidemiology, it also provides the arrows with the property of temporality, that time flows through the arrow: only the nodes that happened prior can cause the nodes happened later.
+
+## Causation vs. Association
+DAG can show both causation and association. When the arrow exists between two nodes, the nodes are associated, while causation only follows the direction of the arrow. In DAG 1, we say A is associated with Y and Y is associated with A. However, Y doesn't cause A, but A causes Y.
+
+Furthermore, as long as the nodes are connected, whether or not directly connected, the association exists. DAG 2 shows a classic confounder DAG, in which A is associated with Y through L.
+
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/bb70327e-77fe-4bff-b45b-955a0dea9c7c' width='200' /&gt;
+  &lt;br/&gt;
+  &lt;small&gt;DAG2&lt;/small&gt;
+&lt;/div&gt;
+
+## D-separation
+In epidemiology, the unnecessary association becomes a threat to causal inference. For example, in DAG 2, the relationship between A and Y is biased by the confounder L. Therefore, if we just run the analysis without handling L, the association we observe is biased and cannot indicate a causal estimate. How do we address the biases? In DAG, we **condition** on the node by putting a box outside the node. This box could be many things: stratification, restriction, adjustment, etc. Whatever methods we choose, it is all shown as a box on the node. 
+
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/2e0fec32-6e05-4600-ad5d-797ade8d98fa' width='200' /&gt;
+  &lt;br/&gt;
+  &lt;small&gt;DAG2 after conditional on L&lt;/small&gt;
+&lt;/div&gt;
+
+The box will block any association through the arrow; hence, A and Y are not associated through the confounder L. This status of independence has many names, but in DAG, we call it **d-separation**. 
+
+Ideally, our goal is to make our exposure node and outcome node d-separated. Once, the association we find through analysis can be interpreted as a causal estimate.
+
+### collider
+There is a special case in the DAG, called **collider**:
+
+DAG 3 shows a collider Y, when Y is caused by both A and U. There is no association between A and U. However, if Y is conditioned, the association path will be opened. 
+
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/a105fdc2-4bb4-4da4-9cf2-a513eed225c3' width='200' /&gt;
+  &lt;br/&gt;
+  &lt;small&gt;DAG3&lt;/small&gt;
+&lt;/div&gt;
+
+Collider can be both a tool and a threat to us. You may have noticed that the **instrumental variable** approach beautifully utilize collider to address unmeasured confounding. Meanwhile, the selection bias is a form of collider that we should be concerned about. 
+
+### rules of d-separation
+Therefore, we conclude the four rules of d-separation:
+
+1. If there are no variables conditioned on, a path is blocked if and only if two arrowheads collide in the same variables
+2. Any path with a non-collider that has been conditioned on is blocked
+3. A collider that has been conditioned on is not blocked
+4. A collider that has a descendant conditioned on does not block a path
+
+Drawing the DAG and thinking of the rules of d-separation, we will be able to visualize the study and the next step.
+
+## Common DAGs
+
+### confounder DAG
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/bb70327e-77fe-4bff-b45b-955a0dea9c7c' width='200' /&gt;
+&lt;/div&gt;
+
+### selection bias DAG
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/bf12de4b-9a67-48c6-9519-9b430eadce3f' width='200' /&gt;
+&lt;/div&gt;
+
+### mediation DAG
+&lt;div align='center'&gt;
+  &lt;img src='https://github.com/user-attachments/assets/6719d0bf-ac04-45a2-ad22-0534a4278525' width='200' /&gt;
+&lt;/div&gt;
+
+## Limitation
+Yet, DAG, as a non-original concept from epidemiology, has some limitations in visualizing the study. For example, effect measure modification cannot be shown in a DAG, though there are articles discussing some potential representations. DAG also fails to represent bias related to the timeline, which requires further graph and verbal explanation. Aside from visualization, DAG is a subjective-knowledge-based graph where the arrows are more empirically based rather than a universal truth. From that, the importance of expert knowledge is crucial in epidemiology. We will need to prioritize the causal question and traditional study design. Then use advanced modern methods as a tool for causal inference.
+
+&lt;p style='text-align:center; opacity:.8; font-size:.95em;'&gt;
+ &lt;em&gt;Written by Peng Luo, Harvard T.H. Chan School of Public Health&lt;em&gt;
+&lt;br&gt;
+ &lt;em&gt;First updated: Valentine's Day 2026&lt;em&gt;
+&lt;br&gt;
+&lt;em&gt;Last updated: 02/14/2026&lt;em&gt;
+&lt;/p&gt;。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/DAG-%20Assumption%20First.html</guid><pubDate>Sat, 14 Feb 2026 06:55:28 +0000</pubDate></item><item><title>Counterfactual Runner</title><link>https://the-epidemiologist.github.io/post/Counterfactual%20Runner.html</link><description>_There’s four and twenty million doors on life’s endless corridor_
 
 Every day we make decisions. Many people, especially late at night, can’t help but wonder: if I had made a different choice in the past, what would my present look like?
 
@@ -41,4 +140,4 @@ Discussions of these three conditions have been an enduring theme in epidemiolog
 
 ## 反事实推理
 
-如果未来有机会，我们可以考证反事实从哲学出发，直到流行病学的发展历史。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/fan-shi-shi-xing-zhe.html</guid><pubDate>Tue, 10 Feb 2026 18:41:46 +0000</pubDate></item><item><title>有关方法</title><link>https://the-epidemiologist.github.io/post/you-guan-fang-fa.html</link><description>标题看起来很拗口，但是是翻译自我很喜欢的流行病学家，匹兹堡大学的**Sonja Swanson**去年九月的演讲**Method Matter**。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/you-guan-fang-fa.html</guid><pubDate>Fri, 30 Jan 2026 04:18:18 +0000</pubDate></item><item><title>流行病学人</title><link>https://the-epidemiologist.github.io/post/liu-xing-bing-xue-ren.html</link><description>建立博客这件事我计划已久。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/liu-xing-bing-xue-ren.html</guid><pubDate>Thu, 29 Jan 2026 05:37:44 +0000</pubDate></item></channel></rss>
+如果未来有机会，我们可以考证反事实从哲学出发，直到流行病学的发展历史。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/fan-shi-shi-xing-zhe.html</guid><pubDate>Tue, 10 Feb 2026 18:41:46 +0000</pubDate></item><item><title>有关方法</title><link>https://the-epidemiologist.github.io/post/you-guan-fang-fa.html</link><description>流行病学的定义在不同教材和学院中略有不同，但始终包括对疾病分布的描述和病因的推断。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/you-guan-fang-fa.html</guid><pubDate>Fri, 30 Jan 2026 04:18:18 +0000</pubDate></item><item><title>流行病学人</title><link>https://the-epidemiologist.github.io/post/liu-xing-bing-xue-ren.html</link><description>建立博客这件事我计划已久。</description><guid isPermaLink="true">https://the-epidemiologist.github.io/post/liu-xing-bing-xue-ren.html</guid><pubDate>Thu, 29 Jan 2026 05:37:44 +0000</pubDate></item></channel></rss>
