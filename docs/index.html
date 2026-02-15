@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -58,7 +58,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="title-left">
     <img src="https://avatars.githubusercontent.com/u/256907733?s=400&u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&v=4" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">The Epidemiologist</a></div>
 <div class="title-right">
-    <a href="https://the-epidemiologist.github.io//tag.html" id="buttonSearch" class="btn btn-invisible circle" title="搜索">
+    <a href="https://the-epidemiologist.github.io//tag.html" id="buttonSearch" class="btn btn-invisible circle" title="Search">
         <svg class="octicon" width="16" height="16" >
             <path id="pathSearch" fill-rule="evenodd"></path>
         </svg>
@@ -70,7 +70,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
             <path id="pathRSS" fill-rule="evenodd"></path>
         </svg>
     </a>
-    <a class="btn btn-invisible circle" onclick="modeSwitch()" title="切换主题">
+    <a class="btn btn-invisible circle" onclick="modeSwitch()" title="switch theme">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
@@ -133,7 +133,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div class="listLabels">
         
         <span class="Label LabelName" style="background-color:#b60205"><object><a style="color:#fff" href="tag.html#中文">中文</a></object></span><span class="Label LabelName" style="background-color:#c2e0c6"><object><a style="color:#fff" href="tag.html#理论">理论</a></object></span>
-        <span class="Label LabelTime" style="background-color:#1f883d">2026-02-11</span>
+        <span class="Label LabelTime" style="background-color:#1f883d">2026-02-10</span>
     </div>
 </a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/you-guan-fang-fa.html">
     <div class="d-flex flex-items-center">
@@ -162,7 +162,7 @@ if("01/29/2026"!=""){
     var startSite=new Date("01/29/2026");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+    document.getElementById("runday").innerHTML="run "+diffDay+" day(s)"+" • ";
 }
 </script></div>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,9 +10,19 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="建立博客这件事我计划已久。">
+<meta name="description" content="建立博客这件事我计划已久。记得小学那会就玩过半年左右微博，那时微博更像一个公开的QQ空间，少了许多现在的公开社交的属性，像是朋友间或者一个人的娱乐。后互联网时代，我多了许多与陌生人的连接，却变得谨小慎微了，也逐渐变得不爱公开表达观点。好在流行病学拥有其哲学属性，让我得以在一个平台上重新借“博客”这一媒介，来省思，或者传递一些观点。  
+## 人人都是流行病学人  
+我没有什么创造力，但擅长解构已有的格式。**流行病学人**改编自著名经济期刊**经济学人**。我看到经济学人的英文名The Economist时，十分困惑为什么不直译为经济学家，而是选择了经济学人这个拗口的翻译。后来得以求教了一位经济学出身的朋友：
+
+<div align='center'>
+  <img src='https://github.">
 <meta property="og:title" content="流行病学人">
-<meta property="og:description" content="建立博客这件事我计划已久。">
+<meta property="og:description" content="建立博客这件事我计划已久。记得小学那会就玩过半年左右微博，那时微博更像一个公开的QQ空间，少了许多现在的公开社交的属性，像是朋友间或者一个人的娱乐。后互联网时代，我多了许多与陌生人的连接，却变得谨小慎微了，也逐渐变得不爱公开表达观点。好在流行病学拥有其哲学属性，让我得以在一个平台上重新借“博客”这一媒介，来省思，或者传递一些观点。  
+## 人人都是流行病学人  
+我没有什么创造力，但擅长解构已有的格式。**流行病学人**改编自著名经济期刊**经济学人**。我看到经济学人的英文名The Economist时，十分困惑为什么不直译为经济学家，而是选择了经济学人这个拗口的翻译。后来得以求教了一位经济学出身的朋友：
+
+<div align='center'>
+  <img src='https://github.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://the-epidemiologist.github.io//post/liu-xing-bing-xue-ren.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/256907733?s=400&u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&v=4">
@@ -51,7 +61,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="header">
 <h1 class="postTitle">流行病学人</h1>
 <div class="title-right">
-    <a href="https://the-epidemiologist.github.io/" id="buttonHome" class="btn btn-invisible circle" title="首页">
+    <a href="https://the-epidemiologist.github.io/" id="buttonHome" class="btn btn-invisible circle" title="home">
         <svg class="octicon" width="16" height="16">
             <path id="pathHome" fill-rule="evenodd"></path>
         </svg>
@@ -64,7 +74,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </a>
     
 
-    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="switch theme">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
@@ -90,7 +100,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </em></em></em></em></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
-<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>
 <div class="comments" id="comments"></div>
 
 </div>
@@ -107,7 +117,7 @@ if("01/29/2026"!=""){
     var startSite=new Date("01/29/2026");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+    document.getElementById("runday").innerHTML="run "+diffDay+" day(s)"+" • ";
 }
 </script></div>
 </body>

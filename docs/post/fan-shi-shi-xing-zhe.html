@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -16,7 +16,27 @@
 
 ## 反事实推理
 
-如果未来有机会，我们可以考证反事实从哲学出发，直到流行病学的发展历史。">
+如果未来有机会，我们可以考证反事实从哲学出发，直到流行病学的发展历史。在本文，我们只单纯探讨反事实推理的基本概念和在流行病学中的体现。
+
+反事实**counterfactual**并不晦涩难懂，通常上，它仅仅指一个事实的另一种可能性。而这一对事实则是事实和它的反事实。基于这个概念，不难发现反事实的一个原则：反事实无法被观察到。而这就是反事实的全部内容了，所以我们可以说，反事实不仅不高深，我们甚至常常会在谈吐中涉及到反事实。例如，很多历史爱好者会讨论，如果过去的人物没有做某件事，会对历史造成什么影响？这就是一个经典的反事实例子。
+
+在上述的例子中，我们不难看出反事实的另一个特征，也就是我们在该框架下，仅仅比对一件事实的不同可能，而其他保持不变。如此，如果我们真能观察到反事实的话，我们观察到的结果差异，就完全可以被解释为事实不同带来的影响。由此，我们在反事实框架上，建起了因果推断的大厦。
+
+## 反事实在流行病中
+
+在流行病中，学者们会基于反事实框架进行因果推断的研究。合乎情理，因为流行病乃至公共卫生，很多时候都在研究干预带来的健康影响。在反事实框架下，我们则将影响由暴露组和未暴露组间的区别延展成更有因果尺度的反事实结果。在哈佛，我们则更直白地用两句话来建立反事实框架：
+_在所有人都受到干预的健康结果_
+对比
+_在所有人都没被干预的健康结果_
+尽管这不代表我们的结果一定具有强因果效度，应用反事实框架还是能让我们更清楚明白我们真正的问题。反事实框架也在数据科学，社会科学，以及政治学中被用到。而在之前提到的历史中，则因为没有研究意义而不被采用。如同我在之前的文章中提到的“问题先行”一样，因果推断的价值来源于研究问题的价值。
+
+## 模拟反事实
+
+在现实里，我们即无法观测不同的时间线，也无法穿越到平行宇宙，甚至无法制作一个人的克隆。在这种情况下，我们如果去实现反事实框架中，对其他保持不变的要求呢？
+
+答案当然是无法，因此我们无法去得知个体的反事实。而对于基于人群的研究，我们可以通过模拟反事实来无限逼近因果推断，利用两个高度近似的人群。当然样本量大带来的高精度也是一个优势，但单就因果推断而言，人群是一种妥协。即便如此，在基于人群的因果推断中，也需要达到这三点：
+
+1.">
 <meta property="og:title" content="反事实行者">
 <meta property="og:description" content="_There's four and twenty million doors on life's endless corridor_
 
@@ -24,7 +44,27 @@
 
 ## 反事实推理
 
-如果未来有机会，我们可以考证反事实从哲学出发，直到流行病学的发展历史。">
+如果未来有机会，我们可以考证反事实从哲学出发，直到流行病学的发展历史。在本文，我们只单纯探讨反事实推理的基本概念和在流行病学中的体现。
+
+反事实**counterfactual**并不晦涩难懂，通常上，它仅仅指一个事实的另一种可能性。而这一对事实则是事实和它的反事实。基于这个概念，不难发现反事实的一个原则：反事实无法被观察到。而这就是反事实的全部内容了，所以我们可以说，反事实不仅不高深，我们甚至常常会在谈吐中涉及到反事实。例如，很多历史爱好者会讨论，如果过去的人物没有做某件事，会对历史造成什么影响？这就是一个经典的反事实例子。
+
+在上述的例子中，我们不难看出反事实的另一个特征，也就是我们在该框架下，仅仅比对一件事实的不同可能，而其他保持不变。如此，如果我们真能观察到反事实的话，我们观察到的结果差异，就完全可以被解释为事实不同带来的影响。由此，我们在反事实框架上，建起了因果推断的大厦。
+
+## 反事实在流行病中
+
+在流行病中，学者们会基于反事实框架进行因果推断的研究。合乎情理，因为流行病乃至公共卫生，很多时候都在研究干预带来的健康影响。在反事实框架下，我们则将影响由暴露组和未暴露组间的区别延展成更有因果尺度的反事实结果。在哈佛，我们则更直白地用两句话来建立反事实框架：
+_在所有人都受到干预的健康结果_
+对比
+_在所有人都没被干预的健康结果_
+尽管这不代表我们的结果一定具有强因果效度，应用反事实框架还是能让我们更清楚明白我们真正的问题。反事实框架也在数据科学，社会科学，以及政治学中被用到。而在之前提到的历史中，则因为没有研究意义而不被采用。如同我在之前的文章中提到的“问题先行”一样，因果推断的价值来源于研究问题的价值。
+
+## 模拟反事实
+
+在现实里，我们即无法观测不同的时间线，也无法穿越到平行宇宙，甚至无法制作一个人的克隆。在这种情况下，我们如果去实现反事实框架中，对其他保持不变的要求呢？
+
+答案当然是无法，因此我们无法去得知个体的反事实。而对于基于人群的研究，我们可以通过模拟反事实来无限逼近因果推断，利用两个高度近似的人群。当然样本量大带来的高精度也是一个优势，但单就因果推断而言，人群是一种妥协。即便如此，在基于人群的因果推断中，也需要达到这三点：
+
+1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://the-epidemiologist.github.io//post/fan-shi-shi-xing-zhe.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/256907733?s=400&u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&v=4">
@@ -63,7 +103,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="header">
 <h1 class="postTitle">反事实行者</h1>
 <div class="title-right">
-    <a href="https://the-epidemiologist.github.io/" id="buttonHome" class="btn btn-invisible circle" title="首页">
+    <a href="https://the-epidemiologist.github.io/" id="buttonHome" class="btn btn-invisible circle" title="home">
         <svg class="octicon" width="16" height="16">
             <path id="pathHome" fill-rule="evenodd"></path>
         </svg>
@@ -76,7 +116,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </a>
     
 
-    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="switch theme">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
@@ -113,7 +153,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </em></em></em></em></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
-<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>
 <div class="comments" id="comments"></div>
 
 </div>
@@ -130,7 +170,7 @@ if("01/29/2026"!=""){
     var startSite=new Date("01/29/2026");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+    document.getElementById("runday").innerHTML="run "+diffDay+" day(s)"+" • ";
 }
 </script></div>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,89 +10,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="In epidemiology, selection bias happens when the study population is biased from the source population. Thus, the findings fail to summarize the target population. In DAG, selection bias is known as **collider stratification bias**. Why is that? This article aims to explain the rationale behind and how a causal DAG illustrates selection bias.
-
-## Selection Bias DAG
-Let's begin with the selection bias DAG.
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f' width='300' />
-</div>
-We define intervention as A, outcome as Y, and selected population as S. As you may recall, in this DAG, S is a collider/common outcome of the A and Y. According to the rules of d-separation, when S is being conditioned on, the path between A and Y is opened. Hence, we often describe the selection bias DAG as the common outcome DAG. But why is the node S being conditioned on? We will need to consider it through an epidemiological approach.
-
-## Selection
-Generally, the selection bias is not caused by our intentionally conditioning on the collider. You want to consider the conditioning(the box outside the variable/letter) means something happened on that node, in which the node is not the original variable from the data. For example, we can make an adjustment on the confounder variable, such as stratification, to condition on it. Using the same logic in selection: in most of the studies, we sample people from the source population that represents the target population. When we cannot use the entire target population in our study, you may consider that there's a natural box outside the node 'selection', like this:
-
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/8a08bba4-3aec-4d78-869b-98a0e5993c70' width='50' />
-</div>
-
-Then, we can include the selection node in our DAG. Remember, we define the selection bias as a common outcome of exposure and the outcome; however, not all scenarios have a direct effect of exposure and outcome on 'selection'.
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/809454bf-a771-49bc-993e-a5c3cfc91474' width='300' />
-</div>
-
-In this case, you can just ignore 'selection' on the DAG:
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/00c095e1-a18a-4fad-9b96-ff978b19bdda' width='175' />
-</div>
-
-These two DAGs are the same thing if you made the previous assumption of no selection bias. Therefore, we can hide 'selection' in our DAG. This also means that once there's a common outcome(selection bias), the DAG will be this:
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f' width='300' />
-</div>
-
-If you only look at the common outcome DAG. It may look like we did conditional on the 'selection' node. However,  through the previous approach, we understand that this is just that we cannot ignore the arrow to 'selection'.
-
-## Example
-Here's an example I used in my lab to explain why the conditioned collider will open a path. Imagine a DAG where A represents 'smoking,' and Y represents 'SNPs'. If I sample only lung cancer patients from the source population, you may find that 'lung cancer patients' is the common outcome of 'smoking' and 'SNPs' because both of them increase the risk of lung cancer. Therefore, if I only study 'lung cancer patients', knowing an individual doesn't smoke will give me the idea that the individual has a gene defect. If you actually do the analysis, you will observe an association, but this is caused by the stratification on the collider. In an epidemiological perspective, this is a biased result of selection bias that your study population is biased from the source population, and thus the results.
-
-<p style='text-align:center; opacity:.8; font-size:.95em;'>
- <em>Written by Peng Luo, Harvard T.H. Chan School of Public Health<em>
-<br>
-<em>Last updated: 02/14/2026<em>
-</p>。">
+<meta name="description" content="In epidemiology, selection bias happens when the study population is biased from the source population.">
 <meta property="og:title" content="Selection Bias in DAG">
-<meta property="og:description" content="In epidemiology, selection bias happens when the study population is biased from the source population. Thus, the findings fail to summarize the target population. In DAG, selection bias is known as **collider stratification bias**. Why is that? This article aims to explain the rationale behind and how a causal DAG illustrates selection bias.
-
-## Selection Bias DAG
-Let's begin with the selection bias DAG.
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f' width='300' />
-</div>
-We define intervention as A, outcome as Y, and selected population as S. As you may recall, in this DAG, S is a collider/common outcome of the A and Y. According to the rules of d-separation, when S is being conditioned on, the path between A and Y is opened. Hence, we often describe the selection bias DAG as the common outcome DAG. But why is the node S being conditioned on? We will need to consider it through an epidemiological approach.
-
-## Selection
-Generally, the selection bias is not caused by our intentionally conditioning on the collider. You want to consider the conditioning(the box outside the variable/letter) means something happened on that node, in which the node is not the original variable from the data. For example, we can make an adjustment on the confounder variable, such as stratification, to condition on it. Using the same logic in selection: in most of the studies, we sample people from the source population that represents the target population. When we cannot use the entire target population in our study, you may consider that there's a natural box outside the node 'selection', like this:
-
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/8a08bba4-3aec-4d78-869b-98a0e5993c70' width='50' />
-</div>
-
-Then, we can include the selection node in our DAG. Remember, we define the selection bias as a common outcome of exposure and the outcome; however, not all scenarios have a direct effect of exposure and outcome on 'selection'.
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/809454bf-a771-49bc-993e-a5c3cfc91474' width='300' />
-</div>
-
-In this case, you can just ignore 'selection' on the DAG:
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/00c095e1-a18a-4fad-9b96-ff978b19bdda' width='175' />
-</div>
-
-These two DAGs are the same thing if you made the previous assumption of no selection bias. Therefore, we can hide 'selection' in our DAG. This also means that once there's a common outcome(selection bias), the DAG will be this:
-<div align='center'>
-  <img src='https://github.com/user-attachments/assets/6a24ef00-6003-495b-8117-8cb7dfd7789f' width='300' />
-</div>
-
-If you only look at the common outcome DAG. It may look like we did conditional on the 'selection' node. However,  through the previous approach, we understand that this is just that we cannot ignore the arrow to 'selection'.
-
-## Example
-Here's an example I used in my lab to explain why the conditioned collider will open a path. Imagine a DAG where A represents 'smoking,' and Y represents 'SNPs'. If I sample only lung cancer patients from the source population, you may find that 'lung cancer patients' is the common outcome of 'smoking' and 'SNPs' because both of them increase the risk of lung cancer. Therefore, if I only study 'lung cancer patients', knowing an individual doesn't smoke will give me the idea that the individual has a gene defect. If you actually do the analysis, you will observe an association, but this is caused by the stratification on the collider. In an epidemiological perspective, this is a biased result of selection bias that your study population is biased from the source population, and thus the results.
-
-<p style='text-align:center; opacity:.8; font-size:.95em;'>
- <em>Written by Peng Luo, Harvard T.H. Chan School of Public Health<em>
-<br>
-<em>Last updated: 02/14/2026<em>
-</p>。">
+<meta property="og:description" content="In epidemiology, selection bias happens when the study population is biased from the source population.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://the-epidemiologist.github.io//post/Selection%20Bias%20in%20DAG.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/256907733?s=400&u=721dfa7ea7b8df3c84598dbd67d52c28277ece6f&v=4">
@@ -131,7 +51,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="header">
 <h1 class="postTitle">Selection Bias in DAG</h1>
 <div class="title-right">
-    <a href="https://the-epidemiologist.github.io/" id="buttonHome" class="btn btn-invisible circle" title="首页">
+    <a href="https://the-epidemiologist.github.io/" id="buttonHome" class="btn btn-invisible circle" title="home">
         <svg class="octicon" width="16" height="16">
             <path id="pathHome" fill-rule="evenodd"></path>
         </svg>
@@ -144,7 +64,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </a>
     
 
-    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="switch theme">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
@@ -187,7 +107,7 @@ We define intervention as A, outcome as Y, and selected population as S. As you 
 </em></em></em></em></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
-<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>
 <div class="comments" id="comments"></div>
 
 </div>
@@ -204,7 +124,7 @@ if("01/29/2026"!=""){
     var startSite=new Date("01/29/2026");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+    document.getElementById("runday").innerHTML="run "+diffDay+" day(s)"+" • ";
 }
 </script></div>
 </body>
