@@ -72,7 +72,7 @@ Therefore, we conclude the four rules of d-separation:
 Drawing the DAG and thinking of the rules of d-separation, we will be able to visualize the study and the next step.
 
 ## Common DAGs
-I explain specifically about these types of DAGs in different articles; you may click on the subtitle to access them.
+I discuss these DAGs in detail in other articles. You are welcome to click on the subtitle to check them!
 ### confounder DAG
 <div align="center">
   <img src="https://github.com/user-attachments/assets/bb70327e-77fe-4bff-b45b-955a0dea9c7c" width="200" />
@@ -88,7 +88,7 @@ I explain specifically about these types of DAGs in different articles; you may 
   <img src="https://github.com/user-attachments/assets/6719d0bf-ac04-45a2-ad22-0534a4278525" width="200" />
 </div>
 
-## Limitation
+## Limitations
 Yet, DAG, as a non-original concept from epidemiology, has some limitations in visualizing the study. For example, effect measure modification cannot be shown in a DAG, though there are articles discussing some potential representations. DAG also fails to represent bias related to the timeline, which requires further graph and verbal explanation. Aside from visualization, DAG is a subjective-knowledge-based graph where the arrows are more empirically based rather than a universal truth. From that, the importance of expert knowledge is crucial in epidemiology. We will need to prioritize the causal question and traditional study design. Then use advanced modern methods as a tool for causal inference.
 
 <p style="text-align:center; opacity:.8; font-size:.95em;">
