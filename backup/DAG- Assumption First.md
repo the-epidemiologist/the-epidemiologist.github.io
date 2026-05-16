@@ -90,11 +90,3 @@ I discuss these DAGs in detail in other articles. You are welcome to click on th
 
 ## Limitations
 Yet, DAG, as a non-original concept from epidemiology, has some limitations in visualizing the study. For example, effect measure modification cannot be shown in a DAG, though there are articles discussing some potential representations. DAG also fails to represent bias related to the timeline, which requires further graph and verbal explanation. Aside from visualization, DAG is a subjective-knowledge-based graph where the arrows are more empirically based rather than a universal truth. From that, the importance of expert knowledge is crucial in epidemiology. We will need to prioritize the causal question and traditional study design. Then use advanced modern methods as a tool for causal inference.
-
-<p style="text-align:center; opacity:.8; font-size:.95em;">
- <em>Written by Peng Luo, Harvard T.H. Chan School of Public Health<em>
-<br>
- <em>First updated: Valentine's Day 2026<em>
-<br>
-<em>Last updated: 02/14/2026<em>
-</p>

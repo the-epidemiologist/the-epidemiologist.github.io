@@ -33,9 +33,3 @@ If you only look at the common outcome DAG. It may look like we did conditional 
 
 ## Example
 Here's an example I used in my lab to explain why the conditioned collider will open a path. Imagine a DAG where A represents "smoking," and Y represents "SNPs". If I sample only lung cancer patients from the source population, you may find that "lung cancer patients" is the common outcome of "smoking" and "SNPs" because both of them increase the risk of lung cancer. Therefore, if I only study "lung cancer patients", knowing an individual doesn't smoke will give me the idea that the individual has a gene defect. If you actually do the analysis, you will observe an association, but this is caused by the stratification on the collider. In an epidemiological perspective, this is a biased result of selection bias that your study population is biased from the source population, and thus the results.
-
-<p style="text-align:center; opacity:.8; font-size:.95em;">
- <em>Written by Peng Luo, Harvard T.H. Chan School of Public Health<em>
-<br>
-<em>Last updated: 02/14/2026<em>
-</p>
