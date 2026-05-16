@@ -27,11 +27,3 @@ The answer, of course, is that we can’t—so we cannot know an individual’s 
 3. Positivity
 
 Discussions of these three conditions have been an enduring theme in epidemiologic causal inference over the past several decades.
-
-<p style="text-align:center; opacity:.8; font-size:.95em;">
- <em>Written by Peng Luo, Harvard T.H. Chan School of Public Health<em>
-<br>
- <em>Translated from Chinese by 50% ChatGPT and 50% me<em>
-<br>
-<em>Last updated: 02/12/2026<em>
-</p>
